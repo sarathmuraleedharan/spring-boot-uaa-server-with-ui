@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle"
+				ng-click="vm.toggleNavbar()">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand logo" href="#/"> <img class="logo-img" style="padding: 5px;"
+				src="content/images/icon.svg" alt="logo" /> <span>SampleApp</span>
+			</a>
+		</div>
+		<div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed"
+			ng-switch="vm.isAuthenticated()">
+
+			<ul class="nav navbar-nav">
+				<li ui-sref-active="active"><a ui-sref="home"><span
+						class="glyphicon glyphicon-home"></span><span class="hidden-sm">Home</span></a></li>
+				<li ui-sref-active="active"><a ui-sref="users"><span
+						class="glyphicon glyphicon-user"></span><span class="hidden-sm">Users</span></a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</nav>
